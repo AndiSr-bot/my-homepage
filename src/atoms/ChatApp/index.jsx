@@ -24,7 +24,7 @@ import { AiFillWechat, AiOutlinePoweroff } from "react-icons/ai";
 import { FaArrowLeft, FaEye, FaEyeSlash } from "react-icons/fa";
 // import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { MdSend } from "react-icons/md";
-import { db } from "../../Helpers/firebase";
+import { db } from "../../helpers/firebase";
 import {
     onValue,
     ref,
@@ -310,12 +310,7 @@ const ChatApp = () => {
                 onClick={() => {
                     onOpen();
                 }}>
-                <Icon
-                    as={AiFillWechat}
-                    w={50}
-                    h={50}
-                    color={"white"}
-                />
+                <Icon as={AiFillWechat} w={50} h={50} color={"white"} />
             </Button>
             <ModalConfirm
                 openModal={openModal}
@@ -330,15 +325,9 @@ const ChatApp = () => {
                 autoFocus={false}>
                 <DrawerOverlay />
                 <DrawerContent bg="rgba(63, 81, 181, 0.5)">
-                    <DrawerHeader
-                        color={"white"}
-                        p={0}>
-                        <Stack
-                            bg={"rgba(63, 81, 181, 0.9)"}
-                            p={2}>
-                            <Text
-                                textAlign="center"
-                                color="white">
+                    <DrawerHeader color={"white"} p={0}>
+                        <Stack bg={"rgba(63, 81, 181, 0.9)"} p={2}>
+                            <Text textAlign="center" color="white">
                                 Customer Services
                             </Text>
                         </Stack>
@@ -443,10 +432,7 @@ const ChatApp = () => {
                         css={cssScroll}>
                         {isLoading ? (
                             <Center h="full">
-                                <Spinner
-                                    size="lg"
-                                    color="white"
-                                />
+                                <Spinner size="lg" color="white" />
                             </Center>
                         ) : !user ? (
                             <Center h={"full"}>
@@ -487,10 +473,7 @@ const ChatApp = () => {
                                             />
                                         </>
                                     ) : null}
-                                    <Text
-                                        textAlign="left"
-                                        color="white"
-                                        mb={2}>
+                                    <Text textAlign="left" color="white" mb={2}>
                                         Email :
                                     </Text>
                                     <Input
@@ -544,9 +527,7 @@ const ChatApp = () => {
                                                 Password :
                                             </Text>
 
-                                            <InputGroup
-                                                mb={3}
-                                                size={"sm"}>
+                                            <InputGroup mb={3} size={"sm"}>
                                                 <Input
                                                     type={
                                                         showPassword
@@ -876,9 +857,7 @@ const ChatApp = () => {
                                     </>
                                 ) : (
                                     <Center h={"full"}>
-                                        <Text
-                                            textAlign="center"
-                                            color="white">
+                                        <Text textAlign="center" color="white">
                                             Belum ada percakapan
                                         </Text>
                                     </Center>
@@ -896,9 +875,7 @@ const ChatApp = () => {
                         }>
                         {groupChat == "andisr131117@gmail.com" ||
                         !groupChat ? null : (
-                            <Flex
-                                align="center"
-                                w={"full"}>
+                            <Flex align="center" w={"full"}>
                                 <Input
                                     flex="1"
                                     placeholder="Ketik pesan..."

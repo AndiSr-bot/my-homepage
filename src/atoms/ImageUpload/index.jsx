@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { PlusOutlined } from "@ant-design/icons";
 import { Modal, Upload } from "antd";
-import { storage } from "../../Helpers/firebase";
+import { storage } from "../../helpers/firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 const getBase64 = (file) =>
     new Promise((resolve, reject) => {
