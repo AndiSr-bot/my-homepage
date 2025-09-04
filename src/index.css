@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/my-homepage-157fb.appspot.com/o/home%2Fwallpapers.png?alt=media&token=06760f48-685e-4fe7-9f1b-4242d7ee2f9f") !important;
+    background-size: cover !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #3f51b5;
+    border-radius: 6px;
+}
