@@ -22,12 +22,7 @@ const Header = () => {
         };
     }, []);
     return (
-        <Box
-            as="header"
-            h="60px"
-            w="100%"
-            bg="#3F51B5"
-            mb={mbs}>
+        <Box as="header" h="60px" w="100%" bg="#3F51B5" mb={mbs}>
             <Center h="100%">
                 <Text
                     textAlign="center"

@@ -1,9 +1,17 @@
 /* eslint-disable react/prop-types */
-import { Box, Center, Container, SimpleGrid, Spinner } from "@chakra-ui/react";
+import {
+    Box,
+    Center,
+    Container,
+    SimpleGrid,
+    Spinner,
+    Text,
+} from "@chakra-ui/react";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import CardContent from "../CardContent";
 import { useEffect, useState } from "react";
 import { firestore } from "../../../helpers/firebase";
+import { version } from "../../../../package.json";
 
 const MainContent = ({ isDashboard: isDashboard = false }) => {
     const [columns, setColumns] = useState(3);
@@ -59,20 +67,12 @@ const MainContent = ({ isDashboard: isDashboard = false }) => {
             display="flex"
             justifyContent="center"
             alignItems="center">
-            <Spinner
-                thickness="4px"
-                color="blue.500"
-                size="xl"
-            />
+            <Spinner thickness="4px" color="blue.500" size="xl" />
         </Box>
     ) : (
         <Container maxW="container.lg">
             <Center>
-                <SimpleGrid
-                    columns={columns}
-                    spacing={8}
-                    mt={8}
-                    mb={8}>
+                <SimpleGrid columns={columns} spacing={8} mt={8} mb={8}>
                     {cardsData.map((data, index) => (
                         <CardContent
                             key={index}
@@ -87,6 +87,13 @@ const MainContent = ({ isDashboard: isDashboard = false }) => {
                     ))}
                 </SimpleGrid>
             </Center>
+            <Text
+                textAlign="center"
+                color="white"
+                fontSize="8px"
+                fontWeight={"600"}>
+                Versi {version}
+            </Text>
         </Container>
     );
 };
