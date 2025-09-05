@@ -1,7 +1,7 @@
 {
     "name": "my-home",
     "private": true,
-    "version": "1.0.1",
+    "version": "1.0.2",
     "homepage": "https://andialfirdaus.my.id/",
     "type": "module",
     "scripts": {

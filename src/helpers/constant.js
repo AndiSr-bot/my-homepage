@@ -2,7 +2,7 @@ import { AiFillDashboard, AiFillHome, AiFillMessage } from "react-icons/ai";
 import { FaCode, FaTools } from "react-icons/fa";
 import { MdOutlineMiscellaneousServices, MdSettings } from "react-icons/md";
 
-export const BASE_API = "https://portofolio.andialfirdaus.my.id";
+export const BASE_API = "https://my-portofolio-production.up.railway.app";
 export const SECRET_DECRYPT_KEY = "Zc3R84Jkphx8Yps";
 
 export const NavMenu = [
